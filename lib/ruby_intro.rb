@@ -49,14 +49,24 @@ end
 
 def hello(name)
   # YOUR CODE HERE
+  return "Hello, "+name
 end
 
 def starts_with_consonant? s
   # YOUR CODE HERE
+  return !s.start_with?('a','e','i','o','u','A','E','I','O','U') && s[0] =~ /[[:alpha:]]/
 end
 
 def binary_multiple_of_4? s
   # YOUR CODE HERE
+  if s =~ /\D/
+  	return false
+  else
+  	if s == "0" 
+  		return true
+  	end
+  	return s.end_with?("100")
+  end
 end
 
 # Part 3
